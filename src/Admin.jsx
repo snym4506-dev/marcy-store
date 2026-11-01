@@ -160,7 +160,7 @@ function Gate({ onUnlock }) {
     }
     setError(
       passcode.trim()
-        ? 
+        ? "That is not the passcode."
         : "Type the studio passcode to continue."
     );
   };
@@ -189,7 +189,7 @@ function Gate({ onUnlock }) {
             setPasscode(event.target.value);
             setError("");
           }}
-          placeholder="••••••"
+          placeholder="â¢â¢â¢â¢â¢â¢"
           autoComplete="current-password"
           autoFocus
         />
@@ -204,10 +204,10 @@ function Gate({ onUnlock }) {
         </button>
 
         <a className="gate__back" href="/">
-          ← Back to the store
+          â Back to the store
         </a>
         <p className="gate__note">
-          Front-end lock for a static demo — it keeps honest people out, not
+          Front-end lock for a static demo â it keeps honest people out, not
           hackers. Change it in <code>src/Admin.jsx</code>.
         </p>
       </form>
@@ -333,7 +333,7 @@ function ProductForm({ product, onCancel, onSave }) {
 
     if (!ok) {
       setError(
-        "Could not save — this browser's storage is full. Remove a photo or use an image URL instead."
+        "Could not save â this browser's storage is full. Remove a photo or use an image URL instead."
       );
     }
   };
@@ -384,7 +384,7 @@ function ProductForm({ product, onCancel, onSave }) {
                 onClick={() => fileRef.current?.click()}
                 disabled={uploading}
               >
-                {uploading ? "Working…" : "Upload photo"}
+                {uploading ? "Workingâ¦" : "Upload photo"}
               </button>
               {values.image && (
                 <button
@@ -406,11 +406,11 @@ function ProductForm({ product, onCancel, onSave }) {
               aria-hidden="true"
             />
             <label className="admin-field">
-              <span>…or paste an image URL</span>
+              <span>â¦or paste an image URL</span>
               <input
                 type="text"
                 value={values.image.startsWith("data:") ? "" : values.image}
-                placeholder="https://…"
+                placeholder="https://â¦"
                 onChange={update("image")}
               />
             </label>
@@ -718,7 +718,7 @@ export default function Admin() {
           <span className="admin-bar__tag">Studio admin</span>
           <div className="admin-bar__actions">
             <a className="admin-btn admin-btn--ghost admin-btn--small" href="/">
-              View store ↗
+              View store â
             </a>
             <button
               type="button"
@@ -775,7 +775,7 @@ export default function Admin() {
         <div className="admin-note">
           <Sparkle size={16} />
           <p>
-            Saved in <strong>this browser only</strong> — that is how a static
+            Saved in <strong>this browser only</strong> â that is how a static
             site works without a server. Export a backup before switching
             devices, or ask a developer to connect a database.
           </p>
@@ -888,7 +888,7 @@ export default function Admin() {
                       <strong>{product.name}</strong>
                       <span>
                         {product.edition}
-                        {product.badge ? ` · ${product.badge}` : ""}
+                        {product.badge ? ` Â· ${product.badge}` : ""}
                       </span>
                     </div>
                   </div>
@@ -966,7 +966,7 @@ export default function Admin() {
         </div>
 
         <p className="admin-footnote">
-          {filtered.length} of {products.length} pieces shown · changes save
+          {filtered.length} of {products.length} pieces shown Â· changes save
           automatically
         </p>
       </main>
