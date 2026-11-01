@@ -3,7 +3,7 @@ import { categories } from "./data";
 import { createId, money, useProducts } from "./products";
 import "./admin.css";
 
-const PASSCODE = "marcy";
+const PASSCODE = "marcy@#1234";
 const SESSION_KEY = "marcystore-admin-unlocked";
 const MAX_IMAGE_CHARS = 1_200_000;
 
