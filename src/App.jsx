@@ -454,7 +454,7 @@ export default function App() {
               <div className="hero__art-backdrop" aria-hidden="true" />
               <div className="hero__panel">
                 <img
-                  src="/images/studio-piece.webp"
+                  src={`${import.meta.env.BASE_URL}images/studio-piece.webp`}
                   alt="Work from the MARCYSTORE studio"
                   fetchPriority="high"
                 />
@@ -883,7 +883,7 @@ export default function App() {
                 <a href="#contact">Shipping</a>
                 <a href="#contact">Returns</a>
                 <a href="#contact">Care guide</a>
-                <a href="/admin">Studio login</a>
+                <a href={`${import.meta.env.BASE_URL}admin`}>Studio login</a>
               </div>
             </div>
           </div>
