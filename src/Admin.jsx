@@ -160,7 +160,7 @@ function Gate({ onUnlock }) {
     }
     setError(
       passcode.trim()
-        ? "That is not the passcode. The default demo passcode is “marcy”."
+        ? 
         : "Type the studio passcode to continue."
     );
   };
